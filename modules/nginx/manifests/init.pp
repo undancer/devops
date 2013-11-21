@@ -1,7 +1,9 @@
 class nginx {
   user { "nginx":
     ensure => present,
-    comment => "nginx user"
+    comment => "nginx user",
+    gid => "nginx",
+    require => Group["nginx"]
   }
 
   group { "nginx":
