@@ -52,4 +52,4 @@ cd nginx-1.4.4
 # --without-mail_imap_module
 # --without-mail_smtp_module
 
-make
+make && make install
