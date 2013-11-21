@@ -11,4 +11,5 @@ class nginx::install {
     timeout => 0,
     require => [Class["nginx::fetch"],File["/tmp/build-nginx.sh"]]
   }
+  file { "/var/cache/nginx": ensure => "directory" }
 }
