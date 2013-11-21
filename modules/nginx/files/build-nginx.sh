@@ -11,6 +11,7 @@ cd nginx-1.4.4
   --user=nginx \
   --group=nginx \
   --sbin-path=/usr/sbin/nginx \
+  --conf-path=/etc/nginx/nginx.conf \
   --error-log-path=/var/log/nginx/error.log \
   --http-log-path=/var/log/nginx/access.log \
   --pid-path=/var/run/nginx.pid \
