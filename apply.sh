@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+puppet apply --modulepath=modules manifests/site.pp
