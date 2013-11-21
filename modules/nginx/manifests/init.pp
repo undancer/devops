@@ -9,5 +9,5 @@ class nginx {
   group { "nginx":
     ensure => present
   }
-  include nginx::fetch, nginx::install, nginx::config
+  include nginx::fetch, nginx::install, nginx::config, nginx::service
 }
