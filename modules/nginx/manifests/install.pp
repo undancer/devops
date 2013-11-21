@@ -5,6 +5,7 @@ class nginx::install {
   }
   file { "/tmp/build-nginx.sh": source => "puppet://$puppetserver/modules/nginx/build-nginx.sh" }
   exec { "build-nginx" :
+  	creates => "/usr/local/nginx",
     cwd => "/tmp",
     command => "/bin/bash /tmp/build-nginx.sh",
     logoutput => on_failure,
