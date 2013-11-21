@@ -1,3 +1,3 @@
 node default {
-  class {"class": stage => pre }
+  class { "java": stage => pre }
 }
