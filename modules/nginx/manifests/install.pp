@@ -1,5 +1,5 @@
 class nginx::install {
-  package { ["pcre-devel"]:
+  package { ["zlib-devel","pcre-devel","openssl-devel"]:
     ensure => present,
     require => [User["nginx"],File["/tmp/nginx-1.4.4.tar.gz"]]
   }
