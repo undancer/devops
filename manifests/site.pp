@@ -1,1 +1,1 @@
-notice { "hello!!": }
+notify {"I'm notifying you.":}
