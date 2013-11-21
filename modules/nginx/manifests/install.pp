@@ -6,7 +6,7 @@ class nginx::install {
   file { "/tmp/build-nginx.sh": source => "puppet://$puppetserver/modules/nginx/build-nginx.sh" }
   exec { "build-nginx" :
     cwd => "/tmp",
-    command => "/tmp/build-nginx.sh",
+    command => "/bin/bash /tmp/build-nginx.sh",
     logoutput => on_failure,
     timeout => 0,
     require => [Class["nginx::fetch"],File["/tmp/build-nginx.sh"]]
