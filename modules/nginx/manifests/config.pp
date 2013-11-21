@@ -6,4 +6,5 @@ class nginx::config {
     mode => 755,
     owner => root
   }
+
 }
