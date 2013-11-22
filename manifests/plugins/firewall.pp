@@ -1,0 +1,1 @@
+exec { "puppet module install puppetlabs-firewall": creates => "/etc/puppet/modules/firewall" }
