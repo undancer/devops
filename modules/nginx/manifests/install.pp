@@ -3,6 +3,7 @@ class nginx::install {
     ensure => present,
     require => [User["nginx"],File["/tmp/nginx-1.4.4.tar.gz"]]
   }
+  package { ["make"]: ensure => present }
   file { "/tmp/build-nginx.sh": source => "puppet://$puppetserver/modules/nginx/build-nginx.sh" }
   exec { "build-nginx" :
   	creates => "/usr/local/nginx",
