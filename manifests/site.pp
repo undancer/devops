@@ -1,4 +1,3 @@
-#import "plugins/*"
 import "hosts/*"
 
 stage { [pre, post]: }
