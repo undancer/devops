@@ -1,4 +1,4 @@
-exec { "install-firewall":
-  creates => "/etc/puppet/modules/firewall",
-  command => "/usr/bin/puppet module install puppetlabs-firewall"
-}
+#exec { "install-firewall":
+#  creates => "/etc/puppet/modules/firewall",
+#  command => "/usr/bin/puppet module install puppetlabs-firewall"
+#}
