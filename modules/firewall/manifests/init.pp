@@ -46,6 +46,13 @@ class firewall {
     action  => 'accept',
   }
 
+  firewall { '101 allow web':
+      state => ['NEW'],
+      dport => '80',
+      proto => 'tcp',
+      action  => 'accept',
+    }
+
   firewall { "998 deny all other requests":
     action   => 'reject',
     proto  => 'all',
