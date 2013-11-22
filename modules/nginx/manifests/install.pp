@@ -1,9 +1,8 @@
 class nginx::install {
-  package { ["zlib-devel","pcre-devel","openssl-devel"]:
+  package { ["make","gcc-c++","zlib-devel","pcre-devel","openssl-devel"]:
     ensure => present,
     require => [User["nginx"],File["/tmp/nginx-1.4.4.tar.gz"]]
   }
-  package { ["make","gcc-c++"]: ensure => present }
   file { "/tmp/build-nginx.sh": source => "puppet://$puppetserver/modules/nginx/build-nginx.sh" }
   exec { "build-nginx" :
   	creates => "/usr/local/nginx",
