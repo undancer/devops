@@ -4,8 +4,6 @@ class firewall {
     /(CentOS)/ => '/etc/sysconfig/iptables'
   }
 
-  notify { "$operatingsystem": }
-
   exec { "purge default firewall":
     command => "/sbin/iptables -F && /sbin/iptables-save > $ipv4_file && /sbin/service iptables restart",
     onlyif  => "/usr/bin/test `/bin/grep \"Firewall configuration written by\" $ipv4_file | /usr/bin/wc -l` -gt 0",
